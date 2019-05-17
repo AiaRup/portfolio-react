@@ -1,7 +1,56 @@
 .projects__list {
+  min-height: 100vh;
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  @media all and (min-width: 768px) {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.project__one {
+  background-color: #bd10e0;
+  @media all and (min-width: 768px) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+.project__two {
+  background-color: #0b255d;
+  // @media all and (min-width: 768px) {
+  //   grid-column-start: 2;
+  //   grid-column-end: 4;
+  // }
+}
+.project__three {
+  background-color: #e86363;
+  // @media all and (min-width: 768px) {
+  //   grid-column-start: 2;
+  //   grid-column-end: 3;
+  // }
+}
+.project__four {
+  background-color: #50e3c2;
+  @media all and (min-width: 768px) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+}
+.project__five {
+  background-color: #f8fc2d;
+  @media all and (min-width: 768px) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+.project__six {
+  background-color: #4022e6;
 }
 
 // mq 320px mobile

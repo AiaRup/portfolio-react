@@ -1,0 +1,47 @@
+// .menu__icon-container {
+//   @include flexLayout('center', 'center');
+//   border: rem(1) solid $white;
+//   border-radius: 50%;
+//   width: rem(40);
+//   height: rem(40);
+//   padding: rem(5);
+//   position: absolute;
+//   top: rem(20);
+//   right: rem(20);
+//   box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.6);
+//   @media all and (min-width: 768px) {
+//     top: rem(40);
+//     right: rem(40);
+//     width: rem(50);
+//     height: rem(50);
+//   }
+// }
+
+// .nav__icon {
+//   width: rem(30);
+//   &::after,
+//   &::before,
+//   .icon__bars {
+//     // background-color: $white;
+//     border-radius: rem(3);
+//     content: '';
+//     display: block;
+//     height: rem(3);
+//     margin: rem(6) 0;
+//     transition: all 0.2s ease-in-out;
+//   }
+//   @media all and (min-width: 768px) {
+//     width: rem(40);
+//     &::after,
+//     &::before,
+//     .icon__bars {
+//       height: rem(4);
+//       margin: rem(9) 0;
+//       transition: all 0.2s ease-in-out;
+//     }
+//   }
+// }
+
+// // mq 320px mobile
+// // mq 768ps tablet
+// // mq 1024 desktop
