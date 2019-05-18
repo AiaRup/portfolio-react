@@ -8,7 +8,7 @@ export default function ProjectsList() {
     <ul className="projects__list">
       {projectsArr.map(project => {
         return (
-          <li className={`project__item ${project.classStyle}`} key={project.id}>
+          <li className="project__item" key={project.id}>
             <Project projectData={project} />
           </li>
         );

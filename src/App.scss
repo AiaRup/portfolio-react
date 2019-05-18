@@ -5,7 +5,7 @@ body {
   padding: 0;
   min-height: 100vh;
   width: 100%;
-  background: $darkGray;
+  box-sizing: border-box;
 }
 
 canvas {
@@ -19,6 +19,7 @@ canvas {
   min-height: 100vh;
   width: 100%;
   position: relative;
+  background: $darkGray;
 }
 
 .title__container {

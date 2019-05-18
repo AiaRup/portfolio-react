@@ -13,7 +13,10 @@
 }
 
 .project__one {
-  background-color: #bd10e0;
+  background-color: rgb(189, 16, 224);
+  &:hover {
+    background-color: rgba(189, 16, 224, 0.6);
+  }
   @media all and (min-width: 768px) {
     grid-row-start: 1;
     grid-row-end: 3;
@@ -21,36 +24,46 @@
     grid-column-end: 3;
   }
 }
+
 .project__two {
-  background-color: #0b255d;
-  // @media all and (min-width: 768px) {
-  //   grid-column-start: 2;
-  //   grid-column-end: 4;
-  // }
+  background-color: rgb(11, 37, 93);
+  &:hover {
+    background-color: rgba(11, 37, 93, 0.6);
+  }
 }
+
 .project__three {
-  background-color: #e86363;
-  // @media all and (min-width: 768px) {
-  //   grid-column-start: 2;
-  //   grid-column-end: 3;
-  // }
+  background-color: rgb(232, 99, 99);
+  &:hover {
+    background-color: rgba(232, 99, 99, 0.6);
+  }
 }
+
 .project__four {
-  background-color: #50e3c2;
+  background-color: rgb(80, 227, 194);
+  &:hover {
+    background-color: rgba(80, 227, 194, 0.6);
+  }
   @media all and (min-width: 768px) {
     grid-column-start: 3;
     grid-column-end: 5;
   }
 }
 .project__five {
-  background-color: #f8fc2d;
+  background-color: rgb(47, 112, 107);
+  &:hover {
+    background-color: rgba(47, 112, 107, 0.6);
+  }
   @media all and (min-width: 768px) {
     grid-column-start: 1;
     grid-column-end: 4;
   }
 }
 .project__six {
-  background-color: #4022e6;
+  background-color: rgb(252, 201, 47);
+  &:hover {
+    background-color: rgba(252, 201, 47, 0.6);
+  }
 }
 
 // mq 320px mobile
