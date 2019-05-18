@@ -15,7 +15,7 @@
 .project__one {
   background-color: rgb(189, 16, 224);
   &:hover {
-    background-color: rgba(189, 16, 224, 0.6);
+    background-color: rgba(189, 16, 224, 0.7);
   }
   @media all and (min-width: 768px) {
     grid-row-start: 1;
@@ -25,24 +25,28 @@
   }
 }
 
+// .project__item {
+//   padding: 0 20px;
+// }
+
 .project__two {
   background-color: rgb(11, 37, 93);
   &:hover {
-    background-color: rgba(11, 37, 93, 0.6);
+    background-color: rgba(11, 37, 93, 0.7);
   }
 }
 
 .project__three {
   background-color: rgb(232, 99, 99);
   &:hover {
-    background-color: rgba(232, 99, 99, 0.6);
+    background-color: rgba(232, 99, 99, 0.7);
   }
 }
 
 .project__four {
-  background-color: rgb(80, 227, 194);
+  background-color: rgb(0, 100, 244);
   &:hover {
-    background-color: rgba(80, 227, 194, 0.6);
+    background-color: rgba(0, 100, 244, 0.7);
   }
   @media all and (min-width: 768px) {
     grid-column-start: 3;
@@ -52,7 +56,7 @@
 .project__five {
   background-color: rgb(47, 112, 107);
   &:hover {
-    background-color: rgba(47, 112, 107, 0.6);
+    background-color: rgba(47, 112, 107, 0.7);
   }
   @media all and (min-width: 768px) {
     grid-column-start: 1;
@@ -62,7 +66,7 @@
 .project__six {
   background-color: rgb(252, 201, 47);
   &:hover {
-    background-color: rgba(252, 201, 47, 0.6);
+    background-color: rgba(252, 201, 47, 0.7);
   }
 }
 

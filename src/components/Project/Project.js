@@ -3,6 +3,7 @@ import './Project.scss';
 import githubIcon from '../../images/icons/github-icon.png';
 import linkIcon from '../../images/icons/link-icon.png';
 import moreIcon from '../../images/icons/more-icon.png';
+import backIcon from '../../images/icons/back-icon.png';
 
 class Project extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class Project extends Component {
 
   render() {
     const {
-      projectData: { title, description, background, github, url, classStyle }
+      projectData: { title, description, background, github, url, classStyle, tools }
     } = this.props;
     const dataFirstClass = !this.state.isDescriptionShowing ? 'slideIn' : 'slideOut';
     const dataSecondClass = this.state.isDescriptionShowing ? 'slide-in' : 'slideOut';
@@ -39,17 +40,21 @@ class Project extends Component {
             </span>
           </div>
           <div className={`slide__data-second ${dataSecondClass}`}>
+            <span className="show__project-name" onClick={this.changeSlide}>
+              <img src={backIcon} alt="back arrow icon" className="back__icon" />
+            </span>
             <p className="project__description">{description}</p>
+            <p className="project__tools">{tools}</p>
             <ol className="project__links">
               <li className="project__link">
-                <a href={github} className="link__github">
+                <a href={github} className="link__github" target="_blank" rel="noopener noreferrer">
                   <span className="github__icon">
                     <img src={githubIcon} alt="github icon" />
                   </span>
                 </a>
               </li>
               <li className="project__link">
-                <a href={url} className="link__url">
+                <a href={url} className="link__url" target="_blank" rel="noopener noreferrer">
                   <span className="link__icon">
                     <img src={linkIcon} alt="link icon" />
                   </span>

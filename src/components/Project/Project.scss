@@ -11,6 +11,21 @@
 
 .project__title {
   text-align: center;
+  padding: 0 20px;
+}
+
+.project__description,
+.project__tools {
+  padding: 0 20px;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  @media all and (min-width: 1280px) {
+    font-size: 18px;
+  }
+}
+
+.project__description {
+  font-weight: bold;
 }
 
 .project__image {
@@ -27,6 +42,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-position: left top;
 }
 
 .project__links {
@@ -46,7 +62,8 @@
   }
 }
 
-.learn__more {
+.learn__more,
+.back__icon {
   &:hover {
     cursor: pointer;
   }
