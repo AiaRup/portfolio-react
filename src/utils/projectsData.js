@@ -59,8 +59,8 @@ const projectsArr = [
     classStyle: 'project__six',
     title: 'weather chat',
     url: 'https://weather-chat-aia.herokuapp.com',
-    description: 'Chat where you can search a weather in a particular city, comment and pin favorite posts.',
-    tools: 'Tools: HTML5, CSS3, JavaScript, jquery, bootstrap, Responsive, APIs',
+    description: 'Chat where you can search weather in a city, comment and pin favorite posts.',
+    tools: 'Tools: HTML5, JavaScript, jquery, bootstrap, Responsive, APIs',
     background: weatherPic,
     github: 'https://github.com/AiaRup/weather-chat'
   }
