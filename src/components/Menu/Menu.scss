@@ -23,7 +23,7 @@
     }
   }
   .menu__sidebar {
-    perspective: 1000px;
+    perspective: rem(1000);
   }
   .menu__item {
     display: flex;
@@ -41,15 +41,15 @@
     }
     &::before {
       width: rem(30);
-      transform: translateY(9px) rotate(135deg);
+      transform: translateY(rem(9)) rotate(135deg);
     }
     &::after {
       width: rem(30);
       margin-left: 0;
-      transform: translateY(-9px) rotate(-135deg);
+      transform: translateY(rem(-9)) rotate(-135deg);
     }
   }
-  @media all and (min-width: 768px) {
+  @include mq($bp_tablet) {
     .nav__icon {
       &::before {
         transform: translateY(13px) rotate(135deg);
@@ -82,9 +82,7 @@
     //   }
     // }
   }
-  @media all and (min-width: 768px) {
-    // top: rem(40);
-    // right: rem(40);
+  @include mq($bp_tablet) {
     width: rem(50);
     height: rem(50);
   }
@@ -110,7 +108,7 @@
   &::before {
     width: rem(18);
   }
-  @media all and (min-width: 768px) {
+  @include mq($bp_tablet) {
     width: rem(40);
     &::after,
     &::before,
@@ -130,7 +128,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #000;
+  background-color: $black;
   min-width: 100vw;
   position: absolute;
   top: 0;
@@ -139,13 +137,13 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, 1fr);
-  @media all and (min-width: 768px) {
+  @include mq($bp_tablet) {
     min-width: 30vw;
   }
 }
 
 .menu__item {
-  border-bottom: 1px solid $lightGray;
+  border-bottom: rem(1) solid $lightGray;
   display: flex;
   text-transform: capitalize;
   justify-content: center;
@@ -161,9 +159,13 @@
     &:hover {
       transform: scale(1.2);
     }
-    @media all and (min-width: 768px) {
+    @include mq($bp_tablet) {
       font-size: rem(20);
     }
+  }
+  .menu__link.active {
+    padding-bottom: 5px;
+    border-bottom: rem(1) solid $lightGray;
   }
 }
 
@@ -174,12 +176,10 @@
 @keyframes sidebarEffect {
   0% {
     opacity: 0;
-    // transform: rotate(-60deg) translateY(60px);
-    transform: scale(0.3) translateY(-60px);
+    transform: scale(0.3) translateY(rem(-60));
   }
   100% {
     transform: scale(1) translateY(0px);
-    // transform: rotate(0) translateY(0px);
     opacity: 1;
   }
 }

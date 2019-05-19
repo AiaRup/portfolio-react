@@ -16,12 +16,6 @@ canvas {
 }
 
 .page__header {
-  // min-height: 100vh;
-  // width: 100%;
-  // position: relative;
-  // background: $darkGray;
-  position: absolute;
-  top: 0;
-  right: 0;
+  @include layoutAbsolute;
   min-height: 100vh;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../stylesheets/main.scss';
 import './Menu.scss';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 
 class Menu extends Component {
   constructor(props) {
@@ -12,6 +12,23 @@ class Menu extends Component {
 
   toggleMenu() {
     this.setState({ isOpen: !this.state.isOpen });
+  }
+
+  hightlightActiveLink(route, text) {
+    return (
+      <Route
+        path={route}
+        children={({ match, history, location }) => {
+          const activeClass = !!match && match.isExact ? 'menu__link active' : 'menu__link';
+
+          return (
+            <Link to={route} className={activeClass} onClick={this.toggleMenu}>
+              {text}
+            </Link>
+          );
+        }}
+      />
+    );
   }
 
   render() {
@@ -26,29 +43,34 @@ class Menu extends Component {
         {this.state.isOpen && (
           <ul className="menu__sidebar">
             <li className="menu__item">
-              <Link className="menu__link" to="/home" onClick={this.toggleMenu}>
+              {this.hightlightActiveLink('/home', 'Home')}
+              {/* <Link className="menu__link" to="/home" onClick={this.toggleMenu}>
                 Home
-              </Link>
+              </Link> */}
             </li>
             <li className="menu__item">
-              <Link className="menu__link" to="/about" onClick={this.toggleMenu}>
+              {this.hightlightActiveLink('/about', 'About')}
+              {/* <Link className="menu__link" to="/about" onClick={this.toggleMenu}>
                 About
-              </Link>
+              </Link> */}
             </li>
             <li className="menu__item">
-              <Link className="menu__link" to="/projects" onClick={this.toggleMenu}>
+              {this.hightlightActiveLink('/projects', 'Projects')}
+              {/* <Link className="menu__link" to="/projects" onClick={this.toggleMenu}>
                 Projects
-              </Link>
+              </Link> */}
             </li>
             <li className="menu__item">
-              <Link className="menu__link" to="/skills" onClick={this.toggleMenu}>
+              {this.hightlightActiveLink('/skills', 'Skills')}
+              {/* <Link className="menu__link" to="/skills" onClick={this.toggleMenu}>
                 Skills
-              </Link>
+              </Link> */}
             </li>
             <li className="menu__item">
-              <Link className="menu__link" to="/contact" onClick={this.toggleMenu}>
+              {this.hightlightActiveLink('/contact', 'Contact')}
+              {/* <Link className="menu__link" to="/contact" onClick={this.toggleMenu}>
                 Contact
-              </Link>
+              </Link> */}
             </li>
           </ul>
         )}

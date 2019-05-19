@@ -15,20 +15,20 @@
   color: $white;
   text-transform: capitalize;
   font-family: $playFair;
-  @media all and (min-width: 768px) {
+  @include mq($bp_tablet) {
     left: rem(100);
   }
   .main__title {
     font-size: rem(50);
     letter-spacing: rem(5);
-    @media all and (min-width: 768px) {
+    @include mq($bp_tablet) {
       font-size: rem(100);
     }
   }
   .main__position {
     font-size: rem(40);
     letter-spacing: rem(3);
-    @media all and (min-width: 768px) {
+    @include mq($bp_tablet) {
       font-size: rem(60);
     }
   }
