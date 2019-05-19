@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import './App.scss';
-import Particles from 'react-particles-js';
+import { Route, Switch, Redirect } from 'react-router-dom';
+
 import ProjectsList from './components/Project/ProjectsList';
-import Menu from './components/Menu/Menu';
-import { particlesOpt } from './utils/particlesOptions.js';
+import Home from './components/Home/Home';
+import Menu from './components/Menu/Menu.js';
+import About from './components/About/About.js';
+import Skills from './components/Skills/SkillList.js';
+// import Contact from './components/Contact/Contact.js';
 
 class App extends Component {
   render() {
@@ -11,20 +15,18 @@ class App extends Component {
       <div className="page">
         <header className="page__header">
           <Menu />
-          <div className="title__container">
-            <h1 className="main__title">aia rupsom</h1>
-            <h2 className="main__position">front end developer</h2>
-          </div>
-          <Particles params={particlesOpt} />
         </header>
         <main className="page__main">
-          <section id="page__projects">
-            <ProjectsList />
-          </section>
-          <section id="page__about">{/* <About /> */}</section>
-          <section id="page__contact">{/* <Contact /> */}</section>
+          <Switch>
+            <Route exact path="/home" component={Home} />
+            <Route path="/projects" component={ProjectsList} />
+            <Route path="/about" component={About} />
+            <Route path="/skills" component={Skills} />
+            {/* <Route path="/contact" component={Contact} /> */}
+            <Redirect from="/" to="/Home" />
+            {/* <Route component={Home} /> */}
+          </Switch>
         </main>
-        <footer className="page__footer">dd</footer>
       </div>
     );
   }

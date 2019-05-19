@@ -16,35 +16,12 @@ canvas {
 }
 
 .page__header {
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-  background: $darkGray;
-}
-
-.title__container {
+  // min-height: 100vh;
+  // width: 100%;
+  // position: relative;
+  // background: $darkGray;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: rem(20);
-  color: $white;
-  text-transform: capitalize;
-  font-family: $playFair;
-  @media all and (min-width: 768px) {
-    left: rem(100);
-  }
-  .main__title {
-    font-size: rem(50);
-    letter-spacing: rem(5);
-    @media all and (min-width: 768px) {
-      font-size: rem(100);
-    }
-  }
-  .main__position {
-    font-size: rem(40);
-    letter-spacing: rem(3);
-    @media all and (min-width: 768px) {
-      font-size: rem(60);
-    }
-  }
+  top: 0;
+  right: 0;
+  min-height: 100vh;
 }
