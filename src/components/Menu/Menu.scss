@@ -24,6 +24,11 @@
   }
   .menu__sidebar {
     perspective: rem(1000);
+    .menu__item {
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
   }
   .menu__item {
     display: flex;
@@ -74,13 +79,6 @@
   z-index: 6;
   &:hover {
     cursor: pointer;
-    // color: #c8c8c8;
-    // .nav__icon {
-    //   &::after,
-    //   &::before {
-    //     width: rem(30);
-    //   }
-    // }
   }
   @include mq($bp_tablet) {
     width: rem(50);
@@ -149,9 +147,6 @@
   justify-content: center;
   align-items: center;
   display: none;
-  // &::last-child {
-  //   border-bottom: none;
-  // }
   .menu__link {
     color: $lightGray;
     text-decoration: none;

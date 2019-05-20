@@ -7,7 +7,7 @@ import weatherPic from '../images/weather-chat.png';
 const projectsArr = [
   {
     id: 1,
-    classStyle: 'project__one',
+    panelClass: 'project__one',
     title: 'a case of inherited code',
     url: 'http://beta.adalab.es/fairfax-m3-reactvengers/',
     description: 'Migration of a JS project to React (Awesome profile cards).',
@@ -17,7 +17,7 @@ const projectsArr = [
   },
   {
     id: 2,
-    classStyle: 'project__two',
+    panelClass: 'project__two',
     title: 'siscode',
     url: 'http://beta.adalab.es/f-m1-siscode/',
     description: 'A group website that contains information about the group and each member.',
@@ -27,7 +27,7 @@ const projectsArr = [
   },
   {
     id: 3,
-    classStyle: 'project__three',
+    panelClass: 'project__three',
     title: 'awesome profile cards',
     url: 'http://beta.adalab.es/fairfax-m2-wildcards/',
     description: 'Online generator of professional cards to share on Twitter.',
@@ -37,7 +37,7 @@ const projectsArr = [
   },
   {
     id: 4,
-    classStyle: 'project__four',
+    panelClass: 'project__four',
     title: 'triplan',
     url: 'https://triplan.herokuapp.com/Login',
     description: 'An app for planning a trip that includes attractions and events.',
@@ -47,7 +47,7 @@ const projectsArr = [
   },
   {
     id: 5,
-    classStyle: 'project__five',
+    panelClass: 'project__five',
     title: 'final project',
     url: '',
     tools: '',
@@ -56,7 +56,7 @@ const projectsArr = [
   },
   {
     id: 6,
-    classStyle: 'project__six',
+    panelClass: 'project__six',
     title: 'weather chat',
     url: 'https://weather-chat-aia.herokuapp.com',
     description: 'Chat where you can search weather in a city, comment and pin favorite posts.',
