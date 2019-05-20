@@ -20,7 +20,6 @@ class Menu extends Component {
         path={route}
         children={({ match, history, location }) => {
           const activeClass = !!match && match.isExact ? 'menu__link active' : 'menu__link';
-
           return (
             <Link to={route} className={activeClass} onClick={this.toggleMenu}>
               {text}
@@ -42,36 +41,11 @@ class Menu extends Component {
         </div>
         {this.state.isOpen && (
           <ul className="menu__sidebar">
-            <li className="menu__item">
-              {this.hightlightActiveLink('/home', 'Home')}
-              {/* <Link className="menu__link" to="/home" onClick={this.toggleMenu}>
-                Home
-              </Link> */}
-            </li>
-            <li className="menu__item">
-              {this.hightlightActiveLink('/about', 'About')}
-              {/* <Link className="menu__link" to="/about" onClick={this.toggleMenu}>
-                About
-              </Link> */}
-            </li>
-            <li className="menu__item">
-              {this.hightlightActiveLink('/projects', 'Projects')}
-              {/* <Link className="menu__link" to="/projects" onClick={this.toggleMenu}>
-                Projects
-              </Link> */}
-            </li>
-            <li className="menu__item">
-              {this.hightlightActiveLink('/skills', 'Skills')}
-              {/* <Link className="menu__link" to="/skills" onClick={this.toggleMenu}>
-                Skills
-              </Link> */}
-            </li>
-            <li className="menu__item">
-              {this.hightlightActiveLink('/contact', 'Contact')}
-              {/* <Link className="menu__link" to="/contact" onClick={this.toggleMenu}>
-                Contact
-              </Link> */}
-            </li>
+            <li className="menu__item">{this.hightlightActiveLink('/home', 'Home')}</li>
+            <li className="menu__item">{this.hightlightActiveLink('/about', 'About')}</li>
+            <li className="menu__item">{this.hightlightActiveLink('/projects', 'Projects')}</li>
+            <li className="menu__item">{this.hightlightActiveLink('/skills', 'Skills')}</li>
+            <li className="menu__item">{this.hightlightActiveLink('/contact', 'Contact')}</li>
           </ul>
         )}
       </nav>

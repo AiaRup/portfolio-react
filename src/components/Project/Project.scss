@@ -68,23 +68,31 @@
 }
 
 .project__details {
-  position: absolute;
-  top: 0;
-  left: 0;
+  @include layoutAbsolute;
   height: 100%;
   width: 100%;
+  // transform-style: preserve-3d;
+  // transition: transform 0.5s ease-in-out;
 }
 
 .slide__data-second,
 .slide__data-first {
   @include flexLayout(center, center);
   flex-direction: column;
-  justify-content: center;
   text-align: center;
   @include layoutAbsolute;
   height: 100%;
   width: 100%;
 }
+
+// .slide__data-second {
+//   transform: translate(0, -100%) rotateX(90deg);
+//   transform-origin: bottom;
+// }
+
+// .cube {
+//   transform: translate(0, 50%) rotateX(-90deg);
+// }
 
 .slideIn {
   animation: slideIn 0.8s forwards;
