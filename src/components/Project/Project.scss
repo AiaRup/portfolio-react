@@ -78,10 +78,18 @@
   @include layoutAbsolute;
   height: 100%;
   width: 100%;
+  left: -10000px;
+  transition: 0.4s;
+  transition: all 0.4s ease-in;
+  // animation-fill-mode: ;
 }
 
-.slideIn {
-  animation: slideIn 0.8s forwards;
+// .slideIn {
+//   // animation: slideIn 0.8s forwards;
+// }
+
+.active__panel {
+  left: 0;
 }
 
 .slideOut {

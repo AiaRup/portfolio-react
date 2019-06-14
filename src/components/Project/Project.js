@@ -25,8 +25,8 @@ class Project extends Component {
     const {
       projectData: { title, description, background, github, url, panelClass, tools }
     } = this.props;
-    const dataFirstClass = !this.state.isDescriptionShowing ? 'slideIn' : 'slideOut';
-    const dataSecondClass = this.state.isDescriptionShowing ? 'slide-in' : 'slideOut';
+    const dataFirstClass = !this.state.isDescriptionShowing ? 'active__panel' : '';
+    const dataSecondClass = this.state.isDescriptionShowing ? 'active__panel' : '';
     return (
       <div className="project__content">
         <div className="project__image-container" style={{ backgroundImage: `url(${background})` }}>

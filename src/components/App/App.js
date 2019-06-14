@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import './App.scss';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-import ProjectsList from './components/Project/ProjectsList';
-import Home from './components/Home/Home';
-import Menu from './components/Menu/Menu.js';
-import About from './components/About/About.js';
-import Skills from './components/Skills/SkillList.js';
+import ProjectsList from '../Project/ProjectsList';
+import Home from '../Home/Home';
+import Menu from '../Menu/Menu.js';
+import About from '../About/About.js';
+import Skills from '../Skills/SkillList.js';
 // import Contact from './components/Contact/Contact.js';
 
 class App extends Component {

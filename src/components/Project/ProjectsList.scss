@@ -30,9 +30,13 @@
   background-color: rgb(189, 16, 224);
 }
 
-.project__one.slideIn {
-  &:hover {
-    background-color: rgba(189, 16, 224, 0.7);
+.project__one {
+  .project__details {
+    .project__panel:first-of-type {
+      &:hover {
+        background-color: rgba(189, 16, 224, 0.7);
+      }
+    }
   }
 }
 

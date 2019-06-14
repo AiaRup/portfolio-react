@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../stylesheets/main.scss';
 import './Menu.scss';
 import { Link, Route } from 'react-router-dom';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 class Menu extends Component {
   constructor(props) {
@@ -21,6 +22,9 @@ class Menu extends Component {
         children={({ match, history, location }) => {
           const activeClass = !!match && match.isExact ? 'menu__link active' : 'menu__link';
           return (
+            // <NavLink to={`#${route}`} activeClassName="menu__link active" className="menu__link">
+            //   {text}
+            // </NavLink>
             <Link to={route} className={activeClass} onClick={this.toggleMenu}>
               {text}
             </Link>

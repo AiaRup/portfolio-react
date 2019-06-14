@@ -27,9 +27,26 @@
   }
   .main__position {
     font-size: rem(40);
+    overflow: hidden;
+    position: relative;
     letter-spacing: rem(3);
+    background: linear-gradient(90deg, $darkGray, #fff, $darkGray);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
     @include mq($bp_tablet) {
       font-size: rem(60);
     }
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
   }
 }
