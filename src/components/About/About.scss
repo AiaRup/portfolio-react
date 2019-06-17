@@ -1,0 +1,38 @@
+@import '../../stylesheets/main.scss';
+
+#about {
+  min-height: 100vh;
+  background-color: $black;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__links {
+  display: grid;
+  grid-template-columns: 25px;
+  grid-template-rows: repeat(4, 25px);
+  grid-gap: 30px;
+  margin-right: 80px;
+  .about__link {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: block;
+    text-indent: -9999px;
+  }
+}
+
+.about__text {
+  max-width: 620px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 22px;
+}
+
+.about__emphasis {
+  font-weight: bold;
+  text-transform: capitalize;
+  @include lineThrough;
+}

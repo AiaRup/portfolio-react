@@ -15,3 +15,32 @@
   top: 0;
   right: 0;
 }
+
+@mixin lineThrough() {
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 50%;
+    margin-top: 1.5px;
+    background: $white;
+  }
+  &::after {
+    right: 2.5px;
+    transition: width 0.8s cubic-bezier(0.2, 0.6, 0.4, 1);
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+      transition: width 0.5s cubic-bezier(0.2, 0.6, 0.4, 1);
+    }
+    &::after {
+      background: transparent;
+      width: 100%;
+      transition: 0s;
+    }
+  }
+}

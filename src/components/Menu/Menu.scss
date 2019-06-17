@@ -151,9 +151,8 @@
     color: $lightGray;
     text-decoration: none;
     transition: transform 0.3s linear;
-    &:hover {
-      transform: scale(1.2);
-    }
+    cursor: pointer;
+    @include lineThrough;
     @include mq($bp_tablet) {
       font-size: rem(20);
     }
