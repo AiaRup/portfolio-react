@@ -5,7 +5,7 @@ import ProjectsList from '../Project/ProjectsList';
 import Home from '../Home/Home';
 import Menu from '../Menu/Menu.js';
 import About from '../About/About.js';
-import Skills from '../Skills/SkillList.js';
+import Skills from '../Skills/Skills.js';
 import Contact from '../Contact/Contact.js';
 
 class App extends Component {
