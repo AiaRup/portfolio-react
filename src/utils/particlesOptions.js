@@ -18,7 +18,7 @@ const particlesOpt = {
       }
     },
     color: {
-      value: ['#BD10E0', '#B8E986', '#50E3C2', '#50E3C2', '#E86363']
+      value: ['#BD10E0', '#B8E986', '#50E3C2', '#E86363']
     },
     shape: {
       type: 'circle',

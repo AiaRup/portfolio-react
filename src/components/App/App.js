@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './App.scss';
-import { Route, Switch, Redirect } from 'react-router-dom';
 
 import ProjectsList from '../Project/ProjectsList';
 import Home from '../Home/Home';
 import Menu from '../Menu/Menu.js';
 import About from '../About/About.js';
 import Skills from '../Skills/SkillList.js';
-// import Contact from './components/Contact/Contact.js';
+import Contact from '../Contact/Contact.js';
 
 class App extends Component {
   render() {
@@ -17,15 +16,11 @@ class App extends Component {
           <Menu />
         </header>
         <main className="page__main">
-          <Switch>
-            <Route exact path="/home" component={Home} />
-            <Route path="/projects" component={ProjectsList} />
-            <Route path="/about" component={About} />
-            <Route path="/skills" component={Skills} />
-            {/* <Route path="/contact" component={Contact} /> */}
-            <Redirect from="/" to="/Home" />
-            {/* <Route component={Home} /> */}
-          </Switch>
+          <Home />
+          <About />
+          <ProjectsList />
+          <Skills />
+          <Contact />
         </main>
       </div>
     );

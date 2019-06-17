@@ -5,7 +5,7 @@ import './Home.scss';
 
 export default function Home() {
   return (
-    <section id="page__intro">
+    <section id="home">
       <div className="title__container">
         <h1 className="main__title">aia rupsom</h1>
         <h2 className="main__position">front end developer</h2>

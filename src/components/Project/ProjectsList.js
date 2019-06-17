@@ -5,7 +5,7 @@ import { projectsArr } from '../../utils/projectsData.js';
 
 export default function ProjectsList() {
   return (
-    <section id="page__projects">
+    <section id="projects">
       <ul className="projects__list">
         {projectsArr.map(project => {
           return (

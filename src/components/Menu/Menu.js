@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../stylesheets/main.scss';
 import './Menu.scss';
-import { Link, Route } from 'react-router-dom';
+// import { Link, Route } from 'react-router-dom';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 class Menu extends Component {
@@ -15,25 +15,6 @@ class Menu extends Component {
     this.setState({ isOpen: !this.state.isOpen });
   }
 
-  hightlightActiveLink(route, text) {
-    return (
-      <Route
-        path={route}
-        children={({ match, history, location }) => {
-          const activeClass = !!match && match.isExact ? 'menu__link active' : 'menu__link';
-          return (
-            // <NavLink to={`#${route}`} activeClassName="menu__link active" className="menu__link">
-            //   {text}
-            // </NavLink>
-            <Link to={route} className={activeClass} onClick={this.toggleMenu}>
-              {text}
-            </Link>
-          );
-        }}
-      />
-    );
-  }
-
   render() {
     const navClass = this.state.isOpen ? 'open' : '';
     return (
@@ -45,11 +26,31 @@ class Menu extends Component {
         </div>
         {this.state.isOpen && (
           <ul className="menu__sidebar">
-            <li className="menu__item">{this.hightlightActiveLink('/home', 'Home')}</li>
-            <li className="menu__item">{this.hightlightActiveLink('/about', 'About')}</li>
-            <li className="menu__item">{this.hightlightActiveLink('/projects', 'Projects')}</li>
-            <li className="menu__item">{this.hightlightActiveLink('/skills', 'Skills')}</li>
-            <li className="menu__item">{this.hightlightActiveLink('/contact', 'Contact')}</li>
+            <li className="menu__item">
+              <NavLink smooth to="/AiaRupsom#home" activeClassName="menu__link active" className="menu__link" location={{ pathname: document.location.pathname + document.location.hash }} onClick={this.toggleMenu}>
+                home
+              </NavLink>
+            </li>
+            <li className="menu__item">
+              <NavLink smooth to="/AiaRupsom#about" activeClassName="menu__link active" className="menu__link" location={{ pathname: document.location.pathname + document.location.hash }} onClick={this.toggleMenu}>
+                about
+              </NavLink>
+            </li>
+            <li className="menu__item">
+              <NavLink smooth to="/AiaRupsom#projects" activeClassName="menu__link active" className="menu__link" location={{ pathname: document.location.pathname + document.location.hash }} onClick={this.toggleMenu}>
+                projects
+              </NavLink>
+            </li>
+            <li className="menu__item">
+              <NavLink smooth to="/AiaRupsom#skills" activeClassName="menu__link active" className="menu__link" location={{ pathname: document.location.pathname + document.location.hash }} onClick={this.toggleMenu}>
+                skills
+              </NavLink>
+            </li>
+            <li className="menu__item">
+              <NavLink smooth to="/AiaRupsom#contact" activeClassName="menu__link active" className="menu__link" location={{ pathname: document.location.pathname + document.location.hash }} onClick={this.toggleMenu}>
+                contact
+              </NavLink>
+            </li>
           </ul>
         )}
       </nav>

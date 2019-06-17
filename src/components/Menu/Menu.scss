@@ -73,7 +73,7 @@
   width: rem(40);
   height: rem(40);
   padding: rem(5);
-  position: absolute;
+  position: fixed;
   top: rem(20);
   right: rem(20);
   z-index: 6;
@@ -128,7 +128,7 @@
   text-align: center;
   background-color: $black;
   min-width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   min-height: 100vh;
