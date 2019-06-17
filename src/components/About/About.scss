@@ -6,19 +6,33 @@
   color: $white;
   position: relative;
   @include flexLayout(center, center);
+  padding: 20px;
   flex-direction: column;
+  @include mq($bp_tablet) {
+    padding: 30px 50px;
+  }
 }
 
 .about__content {
   @include flexLayout(center, center);
+  flex-direction: column;
+  @include mq($bp_tablet) {
+    flex-direction: row;
+  }
 }
 
 .about__links {
+  order: 2;
   display: grid;
-  grid-template-columns: 25px;
-  grid-template-rows: repeat(4, 25px);
+  grid-template-columns: repeat(4, 25px);
   grid-gap: 30px;
-  margin-right: 80px;
+  margin: 30px 0 0;
+  @include mq($bp_tablet) {
+    order: 1;
+    grid-template-columns: 25px;
+    grid-template-rows: repeat(4, 25px);
+    margin: 0 80px 0 0;
+  }
   .about__link {
     background-repeat: no-repeat;
     background-position: center center;
@@ -32,10 +46,16 @@
 }
 
 .about__text {
-  max-width: 610px;
+  order: 1;
   text-align: center;
-  line-height: 36px;
-  font-size: 24px;
+  line-height: 30px;
+  font-size: 20px;
+  @include mq($bp_tablet) {
+    line-height: 36px;
+    font-size: 24px;
+    max-width: 610px;
+    order: 2;
+  }
 }
 
 .about__emphasis {
@@ -44,17 +64,27 @@
   @include lineThrough;
 }
 
+.arrow__link {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  @include mq($bp_tablet) {
+    height: 40px;
+    width: 40px;
+    bottom: 80px;
+  }
+}
+
 .about__arrow {
   box-sizing: border-box;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   border-style: solid;
   border-color: $white;
   border-width: 0px 2px 2px 0px;
-  transform: rotate(45deg) translate(-50%, 0);
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
   -webkit-animation: move_down 1.5s ease-in-out infinite;
   -moz-animation: move_down 1.5s ease-in-out infinite;
   animation: move_down 1.5s ease-in-out infinite;
@@ -62,6 +92,10 @@
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
     box-shadow: 0 5px 5px -5px $white, 5px 0 5px -5px $white;
+  }
+  @include mq($bp_tablet) {
+    height: 40px;
+    width: 40px;
   }
 }
 
