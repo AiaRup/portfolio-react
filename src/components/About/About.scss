@@ -61,9 +61,6 @@
   &:hover {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
-
-    // box-shadow: 0 0 5px 2px $white;
-    // box-shadow: -5px 0 5px -5px #333, 5px 0 5px -5px #333;
     box-shadow: 0 5px 5px -5px $white, 5px 0 5px -5px $white;
   }
 }

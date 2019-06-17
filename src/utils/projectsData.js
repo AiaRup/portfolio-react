@@ -48,11 +48,12 @@ const projectsArr = [
   {
     id: 5,
     panelClass: 'project__five',
-    title: 'final project',
-    url: '',
-    tools: '',
-    description: '',
-    background: 'https://via.placeholder.com/150'
+    title: 'Stack NFQ',
+    url: 'http://beta.adalab.es/fairfax-m4-stack-nfq/#/home',
+    tools: 'Tools: React, JavaScript, Material UI, Scss, APIs.',
+    description: 'Internal stack overflow app for the use of NFQ Advisory Services.',
+    background: 'https://via.placeholder.com/150',
+    github: 'https://github.com/Adalab/fairfax-m4-stack-nfq'
   },
   {
     id: 6,
