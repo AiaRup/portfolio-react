@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../../stylesheets/main.scss';
 import './Menu.scss';
-// import { Link, Route } from 'react-router-dom';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 class Menu extends Component {
