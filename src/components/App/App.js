@@ -7,8 +7,26 @@ import Menu from '../Menu/Menu.js';
 import About from '../About/About.js';
 import Skills from '../Skills/Skills.js';
 import Contact from '../Contact/Contact.js';
+import axios from 'axios';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
+  componentDidMount() {
+    axios
+      .get('http://localhost:8000/contact')
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
   render() {
     return (
       <div className="page">
