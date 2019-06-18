@@ -1,4 +1,5 @@
 import React from 'react';
+import './Progress.scss';
 
 const Filler = props => {
   return <div className="progress__fill" style={{ width: `${props.percentage}%` }} />;

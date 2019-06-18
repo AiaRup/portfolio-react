@@ -14,7 +14,8 @@ export default class Contact extends Component {
         name: '',
         email: '',
         message: ''
-      }
+      },
+      percentage: 0
     };
   }
 
@@ -22,8 +23,21 @@ export default class Contact extends Component {
     this.setState(prevState => {
       const newContact = { ...prevState.contact, [inputId]: value };
       return { contact: newContact };
-    });
+    }, this.checkProgress);
   };
+
+  checkProgress() {
+    const values = Object.values(this.state.contact);
+    let percentage = 0;
+    for (const value of values) {
+      if (value) {
+        percentage += 33;
+      }
+    }
+    if (percentage !== this.state.percentage) {
+      this.setState({ percentage: percentage });
+    }
+  }
 
   onSubmit(event) {
     event.preventDefault();
@@ -34,38 +48,45 @@ export default class Contact extends Component {
         name: '',
         email: '',
         message: ''
-      }
+      },
+      percentage: 0
     });
   }
 
   render() {
-    const { name, email, message } = this.state.contact;
+    const {
+      contact: { name, email, message },
+      percentage
+    } = this.state;
     return (
       <section id="contact">
         <h3 className="contact__title">I'd LOVE to hear from you...</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form__group">
             <label className="form__label" htmlFor="name">
-              Name:{' '}
+              Name:
             </label>
             <input id="name" type="text" className="form__input" value={name} onChange={this.onChangeInput('name')} placeholder="Your Name *" />
           </div>
           <div className="form__group">
             <label className="form__label" htmlFor="email">
-              Email:{' '}
+              Email:
             </label>
             <input id="email " type="text" className="form__input" value={email} onChange={this.onChangeInput('email')} placeholder="Your Email *" />
           </div>
           <div className="form__group">
             <label className="form__label" htmlFor="message">
-              Message:{' '}
+              Message:
             </label>
             <textarea id="message " className="form__textarea" rows="10" value={message} onChange={this.onChangeInput('message')} placeholder="What's on your mind? *" />
           </div>
-          <Progress percentage={this.state.percentage} />
-          <div className="form__group-submit">
-            <input type="submit" value="Submit" className="form__submit" />
-          </div>
+          {percentage <= 66 ? (
+            <Progress percentage={this.state.percentage} />
+          ) : (
+            <div className="form__group-submit">
+              <input type="submit" value="Submit" className="form__submit" />
+            </div>
+          )}
         </form>
       </section>
     );
