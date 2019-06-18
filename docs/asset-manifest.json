@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4ccbb9d8.chunk.css",
+    "main.js": "/static/js/main.fc82e89c.chunk.js",
+    "main.js.map": "/static/js/main.fc82e89c.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.b946ca9f.chunk.js": "/static/js/2.b946ca9f.chunk.js",
+    "static/js/2.b946ca9f.chunk.js.map": "/static/js/2.b946ca9f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2c3c05b9ff927631b42075334f515bce.js": "/precache-manifest.2c3c05b9ff927631b42075334f515bce.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.4ccbb9d8.chunk.css.map": "/static/css/main.4ccbb9d8.chunk.css.map",
+    "static/media/awesome-profile-cards.jpg": "/static/media/awesome-profile-cards.314651b8.jpg",
+    "static/media/inherited-code.jpg": "/static/media/inherited-code.6d3000c5.jpg",
+    "static/media/siscode.jpg": "/static/media/siscode.5ff50519.jpg",
+    "static/media/triplan.jpg": "/static/media/triplan.55078b04.jpg",
+    "static/media/weather-chat.png": "/static/media/weather-chat.122d5b9f.png"
+  }
+}
