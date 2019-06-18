@@ -6,36 +6,36 @@
   position: relative;
   background: $darkGray;
   text-align: center;
-  padding: 40px 0;
+  padding: rem(40) 0;
 }
 
 .skills__title {
   color: $white;
-  font-size: 30px;
+  font-size: rem(30);
   text-transform: capitalize;
   margin: 0;
-  padding: 20px 0;
+  padding: rem(20) 0;
   text-align: center;
   .title__lines {
     display: inline-block;
     position: relative;
-    line-height: 40px;
+    line-height: rem(40);
     &::before,
     &::after {
       content: '';
       position: absolute;
-      height: 5px;
-      border-bottom: 1px solid $white;
-      top: 15px;
-      width: 30px;
+      height: rem(5);
+      border-bottom: rem(1) solid $white;
+      top: rem(15);
+      width: rem(30);
     }
     &::before {
       right: 100%;
-      margin-right: 15px;
+      margin-right: rem(15);
     }
     &::after {
       left: 100%;
-      margin-left: 15px;
+      margin-left: rem(15);
     }
   }
 }

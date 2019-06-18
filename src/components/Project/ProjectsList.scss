@@ -27,7 +27,7 @@
 }
 
 .project__one {
-  background-color: rgb(189, 16, 224);
+  background-color: $purple;
 }
 
 .project__one {
@@ -41,7 +41,7 @@
 }
 
 .project__two {
-  background-color: rgb(11, 37, 93);
+  background-color: $darkBlue;
 }
 
 .project__two.slideIn {
@@ -51,7 +51,7 @@
 }
 
 .project__three {
-  background-color: rgb(232, 99, 99);
+  background-color: $redLight;
 }
 
 .project__three.slideIn {
@@ -61,7 +61,7 @@
 }
 
 .project__four {
-  background-color: rgb(0, 100, 244);
+  background-color: $blue;
 }
 
 .project__four.slideIn {
@@ -71,7 +71,7 @@
 }
 
 .project__five {
-  background-color: rgb(47, 112, 107);
+  background-color: $darkGreen;
 }
 
 .project__five.slideIn {
@@ -81,7 +81,7 @@
 }
 
 .project__six {
-  background-color: rgb(252, 201, 47);
+  background-color: $yellow;
 }
 
 .project__six.slideIn {
@@ -89,7 +89,3 @@
     background-color: rgba(252, 201, 47, 0.7);
   }
 }
-
-// mq 320px mobile
-// mq 768ps tablet
-// mq 1024 desktop
