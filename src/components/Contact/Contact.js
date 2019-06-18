@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Contact.scss';
+import Progress from './Progress/Progress';
 import axios from 'axios';
 
 export default class Contact extends Component {
@@ -41,22 +42,29 @@ export default class Contact extends Component {
     const { name, email, message } = this.state.contact;
     return (
       <section id="contact">
-        <h3>I'd LOVE to here from you</h3>
+        <h3 className="contact__title">I'd LOVE to hear from you...</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form__group">
-            <label>Name: </label>
-            <input type="text" className="form-control" value={name} onChange={this.onChangeInput('name')} />
+            <label className="form__label" htmlFor="name">
+              Name:{' '}
+            </label>
+            <input id="name" type="text" className="form__input" value={name} onChange={this.onChangeInput('name')} placeholder="Your Name *" />
           </div>
           <div className="form__group">
-            <label>Email: </label>
-            <input type="text" className="form-control" value={email} onChange={this.onChangeInput('email')} />
+            <label className="form__label" htmlFor="email">
+              Email:{' '}
+            </label>
+            <input id="email " type="text" className="form__input" value={email} onChange={this.onChangeInput('email')} placeholder="Your Email *" />
           </div>
           <div className="form__group">
-            <label>Message: </label>
-            <textarea className="form-control" value={message} onChange={this.onChangeInput('message')} />
+            <label className="form__label" htmlFor="message">
+              Message:{' '}
+            </label>
+            <textarea id="message " className="form__textarea" rows="10" value={message} onChange={this.onChangeInput('message')} placeholder="What's on your mind? *" />
           </div>
-          <div className="form-group">
-            <input type="submit" value="Submit" className="form__button" />
+          <Progress percentage={this.state.percentage} />
+          <div className="form__group-submit">
+            <input type="submit" value="Submit" className="form__submit" />
           </div>
         </form>
       </section>
