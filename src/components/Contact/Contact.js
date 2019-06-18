@@ -61,24 +61,26 @@ export default class Contact extends Component {
     return (
       <section id="contact">
         <h3 className="contact__title">I'd LOVE to hear from you...</h3>
-        <form onSubmit={this.onSubmit}>
-          <div className="form__group">
-            <label className="form__label" htmlFor="name">
-              Name:
-            </label>
-            <input id="name" type="text" className="form__input" value={name} onChange={this.onChangeInput('name')} placeholder="Your Name *" />
-          </div>
-          <div className="form__group">
-            <label className="form__label" htmlFor="email">
-              Email:
-            </label>
-            <input id="email " type="text" className="form__input" value={email} onChange={this.onChangeInput('email')} placeholder="Your Email *" />
-          </div>
-          <div className="form__group">
-            <label className="form__label" htmlFor="message">
-              Message:
-            </label>
-            <textarea id="message " className="form__textarea" rows="10" value={message} onChange={this.onChangeInput('message')} placeholder="What's on your mind? *" />
+        <form onSubmit={this.onSubmit} className="contact__form">
+          <div className="form__container">
+            <div className="form__group">
+              <label className="form__label" htmlFor="name">
+                Name:
+              </label>
+              <input id="name" type="text" className="form__input" value={name} onChange={this.onChangeInput('name')} placeholder="Your Name *" />
+            </div>
+            <div className="form__group">
+              <label className="form__label" htmlFor="email">
+                Email:
+              </label>
+              <input id="email " type="text" className="form__input" value={email} onChange={this.onChangeInput('email')} placeholder="Your Email *" />
+            </div>
+            <div className="form__group">
+              <label className="form__label" htmlFor="message">
+                Message:
+              </label>
+              <textarea id="message " className="form__textarea" rows="10" value={message} onChange={this.onChangeInput('message')} placeholder="What's on your mind? *" />
+            </div>
           </div>
           {percentage <= 66 ? (
             <Progress percentage={this.state.percentage} />
