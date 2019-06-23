@@ -1,15 +1,14 @@
 import React from 'react';
 import './PieOuter.scss';
+import { calculatePercentage } from '../../../utils/paintCircle';
 
-export default function PieOuter() {
+export default function PieOuter({ text, value, color }) {
   return (
-    <div class="pie-wrapper progress-30">
-      <span class="label">
-        30<span class="smaller">%</span>
-      </span>
-      <div class="pie">
-        <div class="left-side half-circle" />
-        <div class="right-side half-circle" />
+    <div className="pie__details">
+      <div className="pie__border" style={{ backgroundColor: color, backgroundImage: calculatePercentage(value, color) }}>
+        <div className="pie__wrapper">
+          <span className="pie__text">{text}</span>
+        </div>
       </div>
     </div>
   );
