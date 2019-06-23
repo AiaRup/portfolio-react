@@ -1,7 +1,7 @@
 # Aia Rupsom - Portfolio 😊
 
 This is my personal website, where you can see some of my projects, get to know my history, find out about my skills and contact me through the contact form.
-I prepared this MERN app with MongoDB, Exprees, React and Node and some cool libraries!
+I prepared this MERN app with MongoDB, Express, React and NodeJS and some cool libraries!
 
 ## ⚛ Dependencies
 
