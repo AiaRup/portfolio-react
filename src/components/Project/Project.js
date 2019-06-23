@@ -4,6 +4,7 @@ import githubIcon from '../../images/icons/github-icon.png';
 import linkIcon from '../../images/icons/link-icon.png';
 import moreIcon from '../../images/icons/more-icon.png';
 import backIcon from '../../images/icons/back-icon.png';
+import PropTypes from 'prop-types';
 
 class Project extends Component {
   constructor(props) {
@@ -69,3 +70,7 @@ class Project extends Component {
 }
 
 export default Project;
+
+Project.propTypes = {
+  projectData: PropTypes.object
+};
